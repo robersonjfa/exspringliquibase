@@ -4,16 +4,18 @@ spring:
     name: Exemplo Spring Liquibase
   # Jpa Properties
   datasource:
-    url: ${spring.datasource.url}
-    username: ${spring.datasource.username}
-    password: ${spring.datasource.password}
+    url: jdbc:postgresql://localhost:5432/springliquibasedb?serverTimezone=UTC
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
 
   # Liquibase properties
   liquibase:
     enabled: false
+    change-log: classpath:/db/db.changelog-dev.xml
 
 ## Server Properties
 server:
