@@ -5,8 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.edu.unoesc.bdii.exspringliquibase.domain.Country;
 
 // Reduziu o DAO a isso(só tem a interface)
-// IOC - DI
+// IoC(Inversion of Control) - DI(Dependency Injection)
 // Singleton
-public interface CountryRepository extends JpaRepository<Country, Long>
-{
+public interface CountryRepository extends JpaRepository<Country, Long> {
 }

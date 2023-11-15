@@ -2,8 +2,8 @@ package br.edu.unoesc.bdii.exspringliquibase.domain;
 
 import java.util.stream.Stream;
 
-import javax.persistence.AttributeConverter;
-import javax.persistence.Converter;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
 @Converter(autoApply = true)
 public class EmploymentTypeConverter implements AttributeConverter<EmploymentType, String> {
