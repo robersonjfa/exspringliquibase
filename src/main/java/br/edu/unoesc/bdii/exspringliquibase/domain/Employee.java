@@ -33,5 +33,7 @@ public class Employee {
 	@Column(name = "employment_type")
 	@Convert(converter = EmploymentTypeConverter.class)
 	private EmploymentType employmentType;
+	
+	
 
 }

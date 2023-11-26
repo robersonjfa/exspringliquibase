@@ -13,16 +13,14 @@ import lombok.Data;
 @Entity
 @Table(name = "country")
 @Data
+// Getter, Setter, ToString, Construtores, Equals
 public class Country {
 	@Id
-	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "name")
 	private String name;
 
-	@Column(name = "code")
 	private String code;
 
 	@Column(name = "iso_code")
@@ -33,6 +31,7 @@ public class Country {
 
 	// Define uma FK
 	@ManyToOne
-	@JoinColumn(name = "region_id")
+	@JoinColumn(name = "region_id", updatable = true
+	)
 	private Region region;
 }

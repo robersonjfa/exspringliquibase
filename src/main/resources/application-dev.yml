@@ -14,7 +14,7 @@ spring:
 
   # Liquibase properties
   liquibase:
-    enabled: false
+    enabled: true
     change-log: classpath:/db/db.changelog-dev.xml
 
 ## Server Properties

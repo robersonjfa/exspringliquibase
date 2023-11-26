@@ -1,20 +1,25 @@
 package br.edu.unoesc.bdii.exspringliquibase.domain;
 
-import jakarta.persistence.Column;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Entity
-@Table(name = "region")
 @Data
 public class Region {
 	@Id
-	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	
+	@OneToMany(mappedBy = "region", 
+			cascade = CascadeType.PERSIST)
+	private List<Country> countries;
 }
